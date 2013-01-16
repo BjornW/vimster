@@ -45,7 +45,7 @@
 "3. UI
    " Use Solarized or fall back to default vim colorscheme desert
    if filereadable(expand("~/.vim/bundle/vim-colors-solarized/colors/solarized.vim"))
-     let g:solarized_termcolors=256
+     "let g:solarized_termcolors=256
      colorscheme solarized                 " Load a colorscheme
      let g:solarized_termtrans=1
      let g:solarized_contrast="high"
