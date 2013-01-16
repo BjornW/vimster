@@ -44,9 +44,7 @@ fi
 
 echo "Setting up symlinks"
 create_symlink $installpath/.vimrc $HOME/.vimrc
-create_symlink $installpath/.vimrc.fork $HOME/.vimrc.fork
 create_symlink $installpath/.vimrc.bundles $HOME/.vimrc.bundles
-create_symlink $installpath/.vimrc.bundles.fork $HOME/.vimrc.bundles.fork
 create_symlink $installpath/.vim $HOME/.vim
 
 # Create a directory for Vundle if it doesn't exist yet 

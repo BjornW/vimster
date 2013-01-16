@@ -10,5 +10,12 @@
   set rtp+=~/.vim/bundle/vundle
   call vundle#rc()
 
+"Required bundles
+  Bundle 'gmarik/vundle'
+
 " General bundles 
   Bundle 'altercation/vim-colors-solarized'
+
+" General programming bundles
+  Bundle 'tpope/vim-fugitive'
+     
