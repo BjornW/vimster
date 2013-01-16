@@ -1,0 +1,14 @@
+" Vimster bundles 
+" 
+
+" Setup Vim basics
+  set nocompatible        " must be first line
+  set background=dark     " Assume a dark background
+
+" Setup Vundle 
+  filetype off
+  set rtp+=~/.vim/bundle/vundle
+  call vundle#rc()
+
+" General bundles 
+  Bundle 'altercation/vim-colors-solarized'
