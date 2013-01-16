@@ -17,21 +17,24 @@
 
 "2. General stuff
    filetype plugin indent on  " Automagically detect file types
-   syntax on                  " Use syntax highlighting
+   syntax enable              " Use syntax highlighting
    set number                 " Use line numbers   			
    set mouse=a                " Automagically enable mouse usage
    set mousehide              " Hide mousecursor while typing
 
    " Automagically switch to current file directory when opening a new buffer
-   autocmd BufEnter * if bufname("") !~ "^\[A-Za-z0-9\]*://" | lcd %:p:h | endif
-   
+    autocmd BufEnter * if bufname("") !~ "^\[A-Za-z0-9\]*://" | lcd %:p:h | endif
+
+   " For when you forget to sudo.. Really Write the file.
+    cmap w!! w !sudo tee % >/dev/null
+
    set autowrite                       " Automatically write a file when leaving a modified buffer
    set shortmess+=filmnrxoOtT          " Abbrev. of messages (avoids 'hit enter')
    set viewoptions=folds,options,cursor,unix,slash " Better Unix / Windows compatibility
    set virtualedit=onemore             " Allow for cursor beyond last character
    set history=1000                    " Store a ton of history (default is 20)
    set spell                           " Spell checking on
-   set nobackup                        " Backups are for people without version control
+   set nobackup                        " Backups are for people without version controear
    set hidden                          " Allow buffer switching without savin
    if has('persistent_undo')
      set undofile                " So is persistent undo ...
@@ -43,12 +46,13 @@
    " Use Solarized or fall back to default vim colorscheme desert
    if filereadable(expand("~/.vim/bundle/vim-colors-solarized/colors/solarized.vim"))
      let g:solarized_termcolors=256
-     color solarized                 " Load a colorscheme
+     colorscheme solarized                 " Load a colorscheme
      let g:solarized_termtrans=1
      let g:solarized_contrast="high"
      let g:solarized_visibility="high"
+     set t_Co=16 " Make solarized gnome-terminal behave with vim solarized, byobu
    elseif 
-     color desert	    
+     "color desert	    
    endif
    
    set tabpagemax=15 " Only show 15 tabs
@@ -86,7 +90,6 @@
    set scrolljump=5                " Lines to scroll when cursor leaves screen
    set scrolloff=3                 " Minimum lines to keep above and below cursori
   
-
 
 
 

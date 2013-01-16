@@ -15,7 +15,11 @@
 
 " General bundles 
   Bundle 'altercation/vim-colors-solarized'
+  Bundle 'tpope/vim-surround'
+
 
 " General programming bundles
   Bundle 'tpope/vim-fugitive'
-     
+  
+" PHP
+  Bundle 'spf13/PIV'
