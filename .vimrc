@@ -37,9 +37,10 @@
    set nobackup                        " Backups are for people without version controear
    set hidden                          " Allow buffer switching without savin
    if has('persistent_undo')
-     set undofile                " So is persistent undo ...
-     set undolevels=1000         " Maximum number of changes that can be undone
-     set undoreload=10000        " Maximum number lines to save for undo on a buffer reload
+     set undofile                           " So is persistent undo ...
+     set undodir=~/.vim/persistent-undo     " Keep all persisent undo files in one place, no .file.un~ all over anymore             	
+     set undolevels=1000                    " Maximum number of changes that can be undone
+     set undoreload=10000                   " Maximum number lines to save for undo on a buffer reload
    endif
 
 "3. UI

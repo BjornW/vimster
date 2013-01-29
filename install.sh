@@ -53,6 +53,13 @@ if [ ! -d $installpath/.vim/bundle ]; then
     mkdir -p $installpath/.vim/bundle
 fi
 
+# Create a directory for use with Vim 7.3. persistent undo
+# this prevents Vim from placing .filename.un~ all over the place
+# and uses the set undodir in .vimrc to keep this all in ~/.vim/persistent-undo
+if [ ! -d $installpath/.vim/persistent-undo ]; then
+    mkdir -p $installpath/.vim/persistent-undo
+fi    
+
 if [ ! -e $HOME/.vim/bundle/vundle ]; then
     echo "Installing Vundle"
     git clone http://github.com/gmarik/vundle.git $HOME/.vim/bundle/vundle
