@@ -16,7 +16,7 @@
 " General bundles 
   Bundle 'altercation/vim-colors-solarized'
   Bundle 'tpope/vim-surround'
-
+  Bundle 'scrooloose/syntastic'
 
 " General programming bundles
   Bundle 'tpope/vim-fugitive'
