@@ -23,3 +23,6 @@
   
 " PHP
   Bundle 'spf13/PIV'
+
+"Syntastic PHP setting " 
+let g:syntastic_php_checkers=['php']
