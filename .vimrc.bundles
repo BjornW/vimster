@@ -25,5 +25,8 @@
 " PHP
   Bundle 'spf13/PIV'
 
+" Rust
+  Bundle 'rust-lang/rust.vim'
+
 "Syntastic PHP setting " 
 let g:syntastic_php_checkers=['php']
